@@ -1,0 +1,16 @@
+Kolejność:
+AKTUALIZUJ_wykaz.py	
+UTWÓRZ_DANE.py
+DOPASOWANIE_DANYCH_DO_MARSZRUTY.PY
+GPT - 8.2- DODAWANIE_MARSZRUTY.PY
+
+alternatywnie:
+(GPT - 9.0- DODAWANIE_MARSZRUTY+DELETE.PY
+GPT - DELETE_MARSZRUT.PY)
+
+WGRAJ_DO_BAZY_XML(marszruty).py	
+lub POWERSYNC z MES MANAGER
+
+pliki potrzebne do działania:
+tabela_mapowania.xlsx
+wykaz.xlsx
