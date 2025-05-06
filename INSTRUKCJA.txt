@@ -1,0 +1,28 @@
+
+INSTRUKCJA OBSŁUGI — MARSZRUTA2
+
+🔄 KOLEJNOŚĆ URUCHAMIANIA PROGRAMÓW – skrócone opisy
+
+1. MARSZRUTA_setup_2.0 - POBIERANIE_Z_www.py – pobiera najnowszą wersję paczki z GitHuba.
+2. AKTUALIZUJ_wykaz.py – kopiuje aktualny plik wykaz.xlsx z folderu nadrzędnego.
+3. UTWÓRZ_DANE.py – tworzy roboczy plik dane.xlsx na podstawie wykaz.xlsx.
+4. DOPASOWANIE_DANYCH_DO_MARSZRUTY.PY – dopasowuje operacje (WrkRef, OprRef) według tabeli mapowania.
+5. 
+   - GPT - 8.2- DODAWANIE_MARSZRUTY.PY – generuje plik XML tylko z nowymi marszrutami.
+   - GPT - 9.0- DODAWANIE_MARSZRUTY+DELETE.PY – usuwa stare i dodaje nowe marszruty w jednym pliku XML.
+   - GPT - DELETE_MARSZRUT.PY – tworzy plik XML zawierający tylko usunięcia marszrut.
+
+Można wykonać:
+8.2 
+8.2+DEL
+lub
+9.0
+
+6. WGRAJ_DO_BAZY_XML(marszruty).py – importuje wygenerowany plik XML do systemu Lantek.
+
+📂 OPIS POZOSTAŁYCH PLIKÓW
+
+- tabela_mapowania.xlsx – zawiera schemat przypisania marszrut i operacji według typu i nazwy marszruty.
+- wykaz.xlsx – źródłowy wykaz elementów do przetworzenia (referencja, marszruta, typ).
+- dane.xlsx – plik roboczy tworzony i modyfikowany w kolejnych krokach procesu.
+- archiwum/ – katalog do przechowywania starszych plików, kopii zapasowych i wersji roboczych.

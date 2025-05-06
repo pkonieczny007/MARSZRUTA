@@ -1,0 +1,54 @@
+INSTRUKCJA OBSŁUGI — MARSZRUTA2
+Krok 1: Pobierz pliki z GitHub
+Uruchom:
+MARSZRUTA_setup_2.0 - POBIERANIE_Z_www.py
+Ten plik automatycznie pobiera najnowsze pliki z repozytorium.
+
+Krok 2: Zaktualizuj plik wykaz.xlsx
+Uruchom:
+AKTUALIZUJ_wykaz.py
+Ten skrypt kopiuje plik wykaz.xlsx z folderu nadrzędnego do bieżącego katalogu.
+
+Krok 3: Utwórz szkielet danych
+Uruchom:
+UTWÓRZ_DANE.py
+Tworzy plik dane.xlsx na podstawie pliku wykaz.xlsx.
+
+Krok 4: Dopasuj marszruty do danych
+Uruchom:
+DOPASOWANIE_DANYCH_DO_MARSZRUTY.PY
+Na podstawie pliku tabela_mapowania.xlsx automatycznie przypisuje operacje i stanowiska (WrkRef i OprRef) do produktów.
+
+Krok 5: Wygeneruj plik XML
+Masz trzy opcje w zależności od potrzeb:
+
+Tylko dodanie marszrut:
+Uruchom GPT - 8.2- DODAWANIE_MARSZRUTY.PY
+
+Usunięcie poprzednich i dodanie nowych marszrut:
+Uruchom GPT - 9.0- DODAWANIE_MARSZRUTY+DELETE.PY
+
+Tylko usunięcie marszrut:
+Uruchom GPT - DELETE_MARSZRUT.PY
+
+Pliki XML zostaną zapisane w katalogu jako:
+
+marszruty.xml (dla dodania)
+
+del+addMarszruty.xml (dla usunięcia i dodania)
+
+usun_marszruty.xml (dla usunięcia)
+
+Krok 6: Wgraj plik XML do systemu Lantek
+Upewnij się, że plik marszruty.xml istnieje (lub zmień nazwę innego wygenerowanego pliku, np. del+addMarszruty.xml → marszruty.xml).
+
+Uruchom:
+WGRAJ_DO_BAZY_XML(marszruty).py
+Ten skrypt uruchamia XmlImporter.exe i wczytuje dane do systemu.
+
+Uwagi końcowe:
+Przed każdym nowym przebiegiem usuń lub zarchiwizuj stare pliki .xml.
+
+Upewnij się, że plik XmlImporter.exe znajduje się w folderze:
+C:\Lantek\System\Common\XmlImporter.exe
+lub zaktualizuj ścieżkę w skrypcie WGRAJ_DO_BAZY_XML(marszruty).py.
