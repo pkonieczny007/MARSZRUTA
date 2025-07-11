@@ -8,7 +8,7 @@ df_czarny = df[['REFERENCJA_ELEMENTU', 'MARSZRUTA', 'TYP']].copy()
 df_czarny.columns = ['PrdRef', 'MARSZRUTA', 'typ']
 
 # 3. Przygotuj DataFrame dla białego montażu
-df_bialy = df[['BM_REFERENCJA', 'MARSZRUTA', 'BM_TYP']].copy()
+df_bialy = df[['BM_REFERENCJA', 'BM_MARSZRUTA', 'BM_TYP']].copy()
 df_bialy.columns = ['PrdRef', 'MARSZRUTA', 'typ']
 
 # 4. Połącz oba DataFrame’y
